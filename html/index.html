@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>fmnb0516's raspberry  pi web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./modules/bootstrap/css/bootstrap.min.css">
+   </head>
+   <body>
+   
+   <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Menus</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><a href="#youtube-dl">Youtube-DL</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container" id="youtube-dl" style="margin-top:65px;">
+    	<div class="row">
+    		<div class="well bs-component">
+    		<form class="form-horizontal">
+    			<fieldset>
+    				<legend>Download Form</legend>
+    				<div class="form-group">
+    					<label for="inputVid" class="col-lg-2 control-label">Video ID</label>
+    					<div class="col-lg-10">
+    						<input type="text" class="form-control" id="inputVid" placeholder="Video ID">
+    					</div>
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="inputTitle" class="col-lg-2 control-label">Title</label>
+    					<div class="col-lg-10">
+    						<input type="text" class="form-control" id="inputTitle" placeholder="Title">
+    					</div>
+    				</div>
+    				
+    				<div class="form-group">
+    					<label class="col-lg-2 control-label">Type</label>
+    					<div class="col-lg-10">
+    						<div class="radio">
+    							<label>
+    								<input type="radio" name="mediaType" id="mediaAudioType" value="audio" checked="">
+    								Audio
+    							</label>
+    						</div>
+    						<div class="radio">
+    							<label>
+    								<input type="radio" name="mediaType" id="mediaVideoType" value="video">
+    								Video
+    							</label>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				<div class="form-group">
+    					<div class="col-lg-10 col-lg-offset-2">
+    						<button type="reset" class="btn btn-default">Cancel</button>
+    						<button type="submit" class="btn btn-primary">Download</button>
+    					</div>
+    				</div>
+    			</fieldset>
+    		</form>
+    		</div>
+    	</div>
+    	
+    	<div class="row">
+    	
+    		<div class="col-lg-6">
+    			<h3>Audio</h3>
+    			<ul class="list-group" id="audio-list">
+    				
+                </ul>
+            </div>
+            
+            <div class="col-lg-6">
+            	<h3>Video</h3>
+    			<ul class="list-group" id="video-list">
+    				
+                </ul>
+            </div>
+    	
+    	</div>
+    </div>
+    
+   </body>
+</html>
