@@ -1,7 +1,7 @@
 <?php 
 
 $command = "/usr/local/bin/youtube-dl";
-$destdir = "/media/hdd1/musics/";
+$destdir = "/media/hdd1/";
 
 $execCmd = $command . " ";
 
@@ -21,6 +21,9 @@ if(empty($vid) || empty($mode) || empty($title)) {
 
 if($mode === "audio") {
 	$execCmd .= "--extract-audio --audio-format mp3 ";
+	$destdir .= "musics/";
+} else {
+	$destdir .= "videos/";
 }
 
 $execCmd .= "--output \"" . $destdir . $title . ".%(ext)s" . "\" ";
