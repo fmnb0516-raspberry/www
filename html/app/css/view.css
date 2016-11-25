@@ -1,0 +1,8 @@
+
+.app-menu {
+	display: none;
+}
+
+.app-menu.active {
+	display: block;
+}
