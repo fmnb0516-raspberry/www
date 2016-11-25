@@ -32,7 +32,7 @@ $execCmd .= $vid;
 $retCode = 0;
 $retStr = array();
 
-exec($execCmd, $retStr, $retCode);
+exec("export LANG=ja_JP.UTF-8;".$execCmd, $retStr, $retCode);
 
 http_response_code(200);
 header('content-type: application/json; charset=utf-8');
