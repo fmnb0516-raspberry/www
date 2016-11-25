@@ -29,7 +29,7 @@ $execCmd .= $vid;
 $retCode = 0;
 $retStr = array();
 
-exec($execCmd, &$retStr, &$retCode);
+exec($execCmd, $retStr, $retCode);
 
 http_response_code(200);
 header('content-type: application/json; charset=utf-8');
