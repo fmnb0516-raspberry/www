@@ -7,7 +7,6 @@ $execCmd = $command . " ";
 
 $vid = $_GET["vid"];
 $mode = $_GET["type"];
-$title = urldecode($_GET["title"]);
 
 if(empty($vid) || empty($mode) || empty($title)) {
 	http_response_code(400);
@@ -23,10 +22,11 @@ if($mode === "audio") {
 	$execCmd .= "--extract-audio --audio-format mp3 ";
 	$destdir .= "musics/";
 } else {
+	$execCmd .= "--format mp4 ";
 	$destdir .= "videos/";
 }
 
-$execCmd .= "--output \"" . $destdir . $title . ".%(ext)s" . "\" ";
+$execCmd .= "--output \"" . $destdir . "%(title)s.%(ext)s" . "\" ";
 $execCmd .= $vid;
 
 $retCode = 0;
