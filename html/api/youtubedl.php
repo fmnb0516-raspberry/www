@@ -8,7 +8,7 @@ $execCmd = $command . " ";
 $vid = $_GET["vid"];
 $mode = $_GET["type"];
 
-if(empty($vid) || empty($mode) || empty($title)) {
+if(empty($vid)) {
 	http_response_code(400);
 	header('content-type: application/json; charset=utf-8');
 	echo json_encode(array(
