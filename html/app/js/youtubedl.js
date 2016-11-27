@@ -8,7 +8,7 @@
 		return html;
 	};
 	
-	var reloadItemList = function() {
+	var reloadItemList = function(callback) {
 		var url = "/api/mediashow.php";
 		
 		$.ajax({
